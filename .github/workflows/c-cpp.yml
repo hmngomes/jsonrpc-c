@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install libev
+      run: sudo apt-get install -y libev
     - uses: actions/checkout@v4
     - name: autoreconf
       run: autoreconf -i
